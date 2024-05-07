@@ -17,63 +17,55 @@
 
     <div class="column">
       <section class="advancements-container">
+        <!--Introduction Start-->
         <h2 class="main-topic">Introduction</h2>
         <p>
-          The emergence of anime as a cultural phenomenon in the USA mirrors a
-          dynamic interplay of globalization, digital technology, and shifting
-          cultural tastes. From its humble beginnings as a niche interest to its
-          current widespread appeal, anime has captured the imagination of
-          audiences across demographics. This article delves into the
-          multifaceted reasons behind its ascent, examining the role of
-          streaming platforms, fan communities, and cultural exchanges. By
-          exploring the rise of anime in the USA, we gain insights into broader
-          societal trends and the evolving landscape of entertainment
-          consumption. Ultimately, anime's journey reflects the convergence of
-          creativity, technology, and globalization in shaping contemporary
-          media consumption habits.
+          Anime's surge in the USA during the pandemic showcases its resilience
+          and cultural significance. This article delves into its unprecedented
+          growth.
         </p>
       </section>
+      <!--Introduction End-->
 
+      <!--Pandemic Pivot: Exploring Anime and Manga Trends in America Start-->
       <section class="outcomes-container">
         <h2 class="outcomes-title">
-          Rise of Anime Compared to Manga in America
+          Pandemic Pivot: Exploring Anime and Manga Trends in America
         </h2>
         <div class="outcomes-chart">
-        <p>
-          In 2020, anime interest in the USA surged dramatically, defying
-          previous trends, while manga interest remained stable. The sudden
-          uptick in anime, attributed to streaming platforms and popular series,
-          marked a transformative moment in entertainment consumption.
-        </p>
-        <iframe
-          title=""
-          aria-label="Interactive line chart"
-          id="datawrapper-chart-nwg6A"
-          src="https://datawrapper.dwcdn.net/nwg6A/6/"
-          scrolling="no"
-          frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none"
-          height="365"
-          data-external="1"
-        ></iframe>
-
-        <script type="text/javascript">
-          !(function () {
-            "use strict";
-            window.addEventListener("message", function (a) {
-              if (void 0 !== a.data["datawrapper-height"]) {
-                var e = document.querySelectorAll("iframe");
-                for (var t in a.data["datawrapper-height"])
-                  for (var r = 0; r < e.length; r++)
-                    if (e[r].contentWindow === a.source) {
-                      var i = a.data["datawrapper-height"][t] + "px";
-                      e[r].style.height = i;
-                    }
-              }
-            });
-          })();
-        </script>
-        
+          <p>
+            In 2020, amidst the pandemic, anime interest in the USA saw a
+            significant surge, contrasting with stable manga interest. The
+            sudden rise, credited to streaming platforms and popular series,
+            reshaped entertainment consumption.
+          </p>
+          <iframe
+            title=""
+            aria-label="Interactive line chart"
+            id="datawrapper-chart-nwg6A"
+            src="https://datawrapper.dwcdn.net/nwg6A/7/"
+            scrolling="no"
+            frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none"
+            height="365"
+            data-external="1"
+          ></iframe>
+          <script type="text/javascript">
+            !(function () {
+              "use strict";
+              window.addEventListener("message", function (a) {
+                if (void 0 !== a.data["datawrapper-height"]) {
+                  var e = document.querySelectorAll("iframe");
+                  for (var t in a.data["datawrapper-height"])
+                    for (var r = 0; r < e.length; r++)
+                      if (e[r].contentWindow === a.source) {
+                        var i = a.data["datawrapper-height"][t] + "px";
+                        e[r].style.height = i;
+                      }
+                }
+              });
+            })();
+          </script>
         </div>
 
         <p class="future-ai-note">
@@ -84,97 +76,42 @@
         <p class="future-ai-note">Chart : Raghav Agarwal</p>
         <p class="future-ai-note">Source: Google Trends</p>
       </section>
+      <!--Pandemic Pivot: Exploring Anime and Manga Trends in America Start-->
 
+      <!--2023 Study of Anime Consumption and Effects Start-->
       <section class="outcomes-container">
-        <p>
-          A study was carried out in collaboration with The Circus in August
-          2023, which revealed the behaviour of 4,000 Americans over the age of
-          18 about how they consume anime.
-        </p>
-        <h2 class="outcomes-title">
-          Platform Preferences Across Generations: Anime Streaming in the USA
-        </h2>
-        <div class="outcomes-chart">
-          <p>
-            For Gen Z and Millennials, Crunchyroll ranked fourth among streaming platforms for anime. This suggests broader media influences. Among Gen Z, Crunchyroll surged to second place (58%) after Netflix (76%).
+        <h2>2023 Study of Anime Consumption and Effects</h2>
+        <div class="content">
+          <div class="chart-container">
+            <p>
+              <b
+                >A 2023 study revealed Netflix leads anime viewership among Gen
+                Z and Millennials, placing Crunchyroll fourth...</b
+              >
             </p>
-          </p>
-          <canvas id="chart1"></canvas>
-          <p class="future-ai-note">Chart : Raghav Agarwal</p>
-          <p class="future-ai-note">
-            Source: Data from annual media consumption survey, 2023.
-          </p>
+            <canvas id="chart1" width="100" height="100"></canvas>
+          </div>
+
+          <div class="chart-container">
+            <p>
+              <b
+                >... highlighting die-hard fans’ preference and anime's
+                comforting role, deeply affecting their identity and social
+                habits
+              </b>
+            </p>
+            <canvas id="chart2" width="100" height="100"></canvas>
+          </div>
         </div>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            async function fetchDataAndDrawChart() {
-              const response = await fetch(
-                "Data/Anime_Viewership_by_Platform_GenZ_Millennials.csv"
-              );
-              const dataText = await response.text();
-              const data = Papa.parse(dataText, { header: true }).data;
 
-              const labels = data.map((item) => item.Platform);
-              const genZData = data.map((item) => parseFloat(item["Gen_Z"]));
-              const millennialsData = data.map((item) =>
-                parseFloat(item["Millennials"])
-              );
-
-              const ctx = document.getElementById("chart1").getContext("2d");
-              new Chart(ctx, {
-                type: "bar",
-                data: {
-                  labels: labels,
-                  datasets: [
-                    {
-                      label: "Gen Z",
-                      backgroundColor: "rgba(255, 99, 132, 0.2)",
-                      borderColor: "rgba(255, 99, 132, 1)",
-                      data: genZData,
-                      borderWidth: 1,
-                      categoryPercentage: 0.8,
-                      barPercentage: 0.9,
-                    },
-                    {
-                      label: "Millennials",
-                      backgroundColor: "rgba(54, 162, 235, 0.2)",
-                      borderColor: "rgba(54, 162, 235, 1)",
-                      data: millennialsData,
-                      borderWidth: 1,
-                      categoryPercentage: 0.8,
-                      barPercentage: 0.9,
-                    },
-                  ],
-                },
-                options: {
-                  indexAxis: "y",
-                  scales: {
-                    x: {
-                      beginAtZero: true,
-                    },
-                  },
-                  plugins: {
-                    datalabels: {
-                      anchor: "end",
-                      align: "end",
-                      formatter: (value, context) => {
-                        return value + "%";
-                      },
-                      color: "#444",
-                      font: {
-                        weight: "bold",
-                      },
-                    },
-                  },
-                  responsive: true,
-                  maintainAspectRatio: true,
-                },
-              });
-            }
-            fetchDataAndDrawChart();
-          });
-        </script>
+        <script src="chart2-Consumption&Influence.js"></script>
+        <p class="future-ai-note">Chart : Raghav Agarwal</p>
+        <p class="future-ai-note">
+          Source: Polygon (anime-viewer-survey-research)
+        </p>
       </section>
+
+      <!--2023 Study of Anime Consumption and Effects END-->
 
       <section class="outcomes-container">
         <h2 class="outcomes-title">Popularity of Anime Genres</h2>
