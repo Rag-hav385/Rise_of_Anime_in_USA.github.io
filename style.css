@@ -258,14 +258,21 @@ margin-bottom: 60px;}
 .future-ai-container .future-ai-note
 {
   font-style: italic;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   margin-top: 0%;
 }
 
+.future-ai-note
+{
+  font-style: italic;
+  font-size: 12px;
+  color: #333;
+  margin-top: 0%;
+}
 .future-ai-container .future-ai-note,
 .future-ai-container .future-ai-source {
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   margin-top: 0%;
 }

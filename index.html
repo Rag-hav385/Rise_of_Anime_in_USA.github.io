@@ -47,11 +47,11 @@
           title=""
           aria-label="Interactive line chart"
           id="datawrapper-chart-nwg6A"
-          src="https://datawrapper.dwcdn.net/nwg6A/5/"
+          src="https://datawrapper.dwcdn.net/nwg6A/6/"
           scrolling="no"
           frameborder="0"
           style="width: 0; min-width: 100% !important; border: none"
-          height="399"
+          height="365"
           data-external="1"
         ></iframe>
         <script type="text/javascript">
@@ -60,33 +60,39 @@
             window.addEventListener("message", function (a) {
               if (void 0 !== a.data["datawrapper-height"]) {
                 var e = document.querySelectorAll("iframe");
-                for (var t in a.data["datawrapper-height"]) {
-                  for (var r = 0; r < e.length; r++) {
+                for (var t in a.data["datawrapper-height"])
+                  for (var r = 0; r < e.length; r++)
                     if (e[r].contentWindow === a.source) {
                       var i = a.data["datawrapper-height"][t] + "px";
                       e[r].style.height = i;
                     }
-                  }
-                }
               }
             });
           })();
         </script>
+        <p class="future-ai-note">
+          Note: Google Trends' Interest Over Time (IOT) feature calculates the
+          relative popularity of a search term over time by normalizing search
+          results from 0 to 100.
+        </p>
+        <p class="future-ai-note">Chart : Raghav Agarwal</p>
+        <p class="future-ai-note">Source: Google Trends</p>
       </section>
 
-      <p>
-        A study was carried out in collaboration with The Circus in August 2023,
-        which revealed the behaviour of 4,000 Americans over the age of 18 about
-        how they consume anime.
-      </p>
-
       <section class="outcomes-container">
-        <h2 class="outcomes-title">Anime Streaming Subscriptions</h2>
+        <p>
+          A study was carried out in collaboration with The Circus in August
+          2023, which revealed the behaviour of 4,000 Americans over the age of
+          18 about how they consume anime.
+        </p>
+        <h2 class="outcomes-title">
+          Platform Preferences Across Generations: Anime Streaming in the USA
+        </h2>
         <div class="outcomes-chart">
           <canvas id="chart1"></canvas>
-          <p>
-            Graph showing the percentage of Gen Z and Millennials who watch
-            anime on various platforms.
+          <p class="future-ai-note">Chart : Raghav Agarwal</p>
+          <p class="future-ai-note">
+            Source: Data from annual media consumption survey, 2023.
           </p>
         </div>
         <script>
@@ -131,10 +137,9 @@
                   ],
                 },
                 options: {
-                  indexAxis: "y", // This changes the chart to horizontal
+                  indexAxis: "y",
                   scales: {
                     x: {
-                      // X-axis now represents the values
                       beginAtZero: true,
                     },
                   },
@@ -143,7 +148,7 @@
                       anchor: "end",
                       align: "end",
                       formatter: (value, context) => {
-                        return value + "%"; // Append '%' to the value
+                        return value + "%";
                       },
                       color: "#444",
                       font: {
