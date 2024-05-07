@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rise of Anime in USA</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Rise of Anime in USA</h1>
+    </header>
+
+    <div class="column">
+      <section class="advancements-container">
+        <h2 class="main-topic">Introduction</h2>
+        <p>
+          The emergence of anime as a cultural phenomenon in the USA mirrors a
+          dynamic interplay of globalization, digital technology, and shifting
+          cultural tastes. From its humble beginnings as a niche interest to its
+          current widespread appeal, anime has captured the imagination of
+          audiences across demographics. This article delves into the
+          multifaceted reasons behind its ascent, examining the role of
+          streaming platforms, fan communities, and cultural exchanges. By
+          exploring the rise of anime in the USA, we gain insights into broader
+          societal trends and the evolving landscape of entertainment
+          consumption. Ultimately, anime's journey reflects the convergence of
+          creativity, technology, and globalization in shaping contemporary
+          media consumption habits.
+        </p>
+      </section>
+
+      <section class="timeline-container">
+        <h2 class="timeline-title">
+          Rise of Anime Compared to Manga in America
+        </h2>
+        <p>
+          In 2020, anime interest in the USA surged dramatically, defying
+          previous trends, while manga interest remained stable. The sudden
+          uptick in anime, attributed to streaming platforms and popular series,
+          marked a transformative moment in entertainment consumption.
+        </p>
+        <iframe
+          title=""
+          aria-label="Interactive line chart"
+          id="datawrapper-chart-nwg6A"
+          src="https://datawrapper.dwcdn.net/nwg6A/5/"
+          scrolling="no"
+          frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none"
+          height="399"
+          data-external="1"
+        ></iframe>
+        <script type="text/javascript">
+          !(function () {
+            "use strict";
+            window.addEventListener("message", function (a) {
+              if (void 0 !== a.data["datawrapper-height"]) {
+                var e = document.querySelectorAll("iframe");
+                for (var t in a.data["datawrapper-height"]) {
+                  for (var r = 0; r < e.length; r++) {
+                    if (e[r].contentWindow === a.source) {
+                      var i = a.data["datawrapper-height"][t] + "px";
+                      e[r].style.height = i;
+                    }
+                  }
+                }
+              }
+            });
+          })();
+        </script>
+      </section>
+
+      <p>
+        A study was carried out in collaboration with The Circus in August 2023,
+        which revealed the behaviour of 4,000 Americans over the age of 18 about
+        how they consume anime.
+      </p>
+
+      <section class="outcomes-container">
+        <h2 class="outcomes-title">Anime Streaming Subscriptions</h2>
+        <div class="outcomes-chart">
+          <canvas id="chart1"></canvas>
+          <p>
+            Graph showing the percentage of Gen Z and Millennials who watch
+            anime on various platforms.
+          </p>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            async function fetchDataAndDrawChart() {
+              const response = await fetch(
+                "Data/Anime_Viewership_by_Platform_GenZ_Millennials.csv"
+              );
+              const dataText = await response.text();
+              const data = Papa.parse(dataText, { header: true }).data;
+
+              const labels = data.map((item) => item.Platform);
+              const genZData = data.map((item) => parseFloat(item["Gen_Z"]));
+              const millennialsData = data.map((item) =>
+                parseFloat(item["Millennials"])
+              );
+
+              const ctx = document.getElementById("chart1").getContext("2d");
+              new Chart(ctx, {
+                type: "bar",
+                data: {
+                  labels: labels,
+                  datasets: [
+                    {
+                      label: "Gen Z",
+                      backgroundColor: "rgba(255, 99, 132, 0.2)",
+                      borderColor: "rgba(255, 99, 132, 1)",
+                      data: genZData,
+                      borderWidth: 1,
+                      categoryPercentage: 0.8,
+                      barPercentage: 0.9,
+                    },
+                    {
+                      label: "Millennials",
+                      backgroundColor: "rgba(54, 162, 235, 0.2)",
+                      borderColor: "rgba(54, 162, 235, 1)",
+                      data: millennialsData,
+                      borderWidth: 1,
+                      categoryPercentage: 0.8,
+                      barPercentage: 0.9,
+                    },
+                  ],
+                },
+                options: {
+                  indexAxis: "y", // This changes the chart to horizontal
+                  scales: {
+                    x: {
+                      // X-axis now represents the values
+                      beginAtZero: true,
+                    },
+                  },
+                  plugins: {
+                    datalabels: {
+                      anchor: "end",
+                      align: "end",
+                      formatter: (value, context) => {
+                        return value + "%"; // Append '%' to the value
+                      },
+                      color: "#444",
+                      font: {
+                        weight: "bold",
+                      },
+                    },
+                  },
+                  responsive: true,
+                  maintainAspectRatio: true,
+                },
+              });
+            }
+            fetchDataAndDrawChart();
+          });
+        </script>
+      </section>
+
+      <section class="outcomes-container">
+        <h2 class="outcomes-title">Popularity of Anime Genres</h2>
+        <div class="outcomes-chart">
+          <div id="chart2"></div>
+          <p>Graph 2 description goes here...</p>
+        </div>
+      </section>
+
+      <section class="outcomes-container">
+        <h2 class="outcomes-title">
+          Geographic Distribution of Anime Conventions
+        </h2>
+        <div class="outcomes-chart">
+          <div id="chart3"></div>
+          <p>Graph 3 description goes here...</p>
+        </div>
+      </section>
+
+      <section class="outcomes-container">
+        <h2 class="outcomes-title">Conclusion</h2>
+        <p>Concluding remarks go here...</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>Copyright © 2024 Your Name</p>
+    </footer>
+  </body>
+</html>

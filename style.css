@@ -1,0 +1,296 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #6A5ACD; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  section {
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #2F4F4F; 
+  }
+  
+  .chart {
+    width: 100%;
+    height: 300px; 
+    background-color: #F5F5F5; 
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #2F4F4F; 
+  }
+  /* Base styles for the entire document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.university-logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.column {
+  padding: 20px;
+  margin: auto;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles specific to the "Technological Advancements" section */
+.advancements-container h1.main-topic {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Styles specific to the "Timeline of Key Healthcare Technology Innovations" section */
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline-container h2.timeline-title {
+  font-size: 20px;
+  margin-bottom: 0%;
+}
+
+.timeline-container .timeline-dek-container {
+  margin-bottom: px;
+}
+
+.timeline-container .timeline-dek {
+  font-size: 20px;
+  color: #080808;
+}
+
+.timeline-container .timeline-chart iframe {
+  width: 100%;
+  height: 397px;
+  margin-bottom: 0px;
+}
+
+.timeline-container .timeline-note
+{
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  margin-top: 0px;
+}
+
+.timeline-container .timeline-source {
+  font-size: 14px;
+  color: #333;
+  margin-top: 0px;
+margin-bottom: 60px;}
+
+/* Styles specific to the "Impact on Patient Outcomes and Healthcare Accessibility" section */
+.outcomes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.outcomes-chart canvas {
+  max-width: 100%;
+  max-height: 500px;  /* Adjust this based on your layout needs */
+}
+
+.outcomes-container h2.outcomes-title {
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+/* Container for both the dek and chart */
+.outcomes-deks-charts-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Container for each dek and chart pair */
+.outcomes-dek-chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px; /* Add space between the left and right sides */
+}
+
+.outcomes-dek-chart:last-child {
+  margin-right: 0; /* Remove margin for the last dek-chart pair */
+}
+
+.outcomes-container .outcomes-dek-container {
+  margin-bottom: 20px;
+}
+
+.outcomes-container .outcomes-dek {
+  font-size: 20px;
+  color: #080808;
+}
+
+.outcomes-container .outcomes-chart-label {
+  font-size: 20px;
+  margin-bottom: 0%;
+  font-weight: bold;
+}
+
+.outcomes-container .outcomes-chart-image,
+.outcomes-container .outcomes-chart iframe {
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  margin-bottom: 0%;
+}
+
+.outcomes-container .outcomes-note
+ {
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  margin-top: 0%;
+}
+.outcomes-container .outcomes-note,
+.outcomes-container .outcomes-source {
+  font-size: 14px;
+  color: #333;
+  margin-top: 0%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .outcomes-deks-charts-container {
+    flex-direction: column;
+  }
+
+  .outcomes-dek-chart {
+    margin-right: 0;
+  }
+
+  .outcomes-container .outcomes-chart-image,
+  .outcomes-container .outcomes-chart iframe {
+    height: auto; /* Adjust height for mobile */
+  }
+}
+
+/* Styles specific to the "Future AI in Healthcare" section */
+.future-ai-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.future-ai-container h2.future-ai-title {
+  margin-top: 60px;
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+/* Container for both the dek and chart */
+.future-ai-deks-charts-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Container for each dek and chart pair */
+.future-ai-dek-chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px; /* Add space between the left and right sides */
+}
+
+.future-ai-dek-chart:last-child {
+  margin-right: 0; /* Remove margin for the last dek-chart pair */
+}
+
+.future-ai-container .future-ai-dek-container {
+  margin-bottom: 20px;
+}
+
+.future-ai-container .future-ai-dek {
+  font-size: 20px;
+  color: #080808;
+}
+
+.future-ai-container .future-ai-chart-label {
+  font-size: 20px;
+  margin-bottom: 0%;
+  font-weight: bold;
+}
+
+.future-ai-container .future-ai-chart-l {
+  margin-top: 0px;
+  font-size: 20px;
+  margin-bottom: 0%;
+  font-weight: bold;
+}
+
+.future-ai-container .future-ai-chart-image,
+.future-ai-container .future-ai-chart iframe {
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  margin-bottom: 0%;
+}
+
+.future-ai-container .future-ai-note
+{
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  margin-top: 0%;
+}
+
+.future-ai-container .future-ai-note,
+.future-ai-container .future-ai-source {
+  font-size: 14px;
+  color: #333;
+  margin-top: 0%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .future-ai-deks-charts-container {
+    flex-direction: column;
+  }
+
+  .future-ai-dek-chart {
+    margin-right: 0;
+  }
+
+  .future-ai-container .future-ai-chart-image,
+  .future-ai-container .future-ai-chart iframe {
+    height: auto; /* Adjust height for mobile */
+  }
+}
+
+  
+  footer {
+    background-color: #6A5ACD; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
