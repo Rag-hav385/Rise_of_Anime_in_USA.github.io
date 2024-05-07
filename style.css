@@ -13,21 +13,20 @@ body, html {
 
 .content {
   display: flex;
-  justify-content: center;  /* Ensures centered alignment of child elements */
-  align-items: start;       /* Aligns items at the start of the flex container */
-  flex-wrap: wrap;          /* Allows items to wrap if needed */
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ensures even spacing and centering */
+  align-items: flex-start; /* Aligns items at the start of the container */
 }
 
 .chart-container {
-  flex: 1 1 400px;          /* Gives each chart container a flex basis of 400px and allows them to grow */
-  max-width: 50%;           /* Limits the maximum width to 50% of the parent */
-  margin: 10px;             /* Adds some space around each container */
-  box-sizing: border-box;   /* Includes padding and border in the element's total width and height */
+  flex: 1 1 45%; /* Allows each container to grow and shrink but base at 45% of the parent container's width */
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 canvas {
-  width: 100% !important;   /* Ensures the canvas takes the full width of its container */
-  height: auto !important;  /* Adjusts height automatically based on the width to maintain aspect ratio */
+  width: 100% !important; /* Full width of the container */
+  height: auto !important; /* Height automatically adjusts */
 }
 
 
