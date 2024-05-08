@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2"></script>
   </head>
   <body>
     <header class="header">
@@ -84,10 +86,24 @@
       <!--Popular Anime Interest Rise in Pandemic Start-->
 
       <section class="outcomes-container">
-        <h2 class="outcomes-title">Popularity of Anime Genres</h2>
-        <div class="outcomes-chart">
-          <p>Graph 2 description goes here...</p>
+        <h2 class="outcomes-title">Growth of popular Anime in Pandemic</h2>
+        <p>
+          During the pandemic, anime series like "Jujutsu Kaisen" and "Attack on
+          Titan" experienced significant spikes in popularity, largely due to
+          their availability on Netflix, which attracted a vast new audience and
+          reinvigorated the genre's appeal.
+        </p>
+        <div class="chart-grid">
+          <canvas id="chart-genre-1"></canvas>
+          <canvas id="chart-genre-2"></canvas>
+          <canvas id="chart-genre-3"></canvas>
+          <canvas id="chart-genre-4"></canvas>
+          <canvas id="chart-genre-5"></canvas>
+          <canvas id="chart-genre-6"></canvas>
         </div>
+        <script src="Chart3-3X2-grid.js"></script>
+        <p class="future-ai-note">Chart : Raghav Agarwal</p>
+        <p class="future-ai-note">Source: Google Trends</p>
       </section>
 
       <!--Popular Anime Interest Rise in Pandemic End-->

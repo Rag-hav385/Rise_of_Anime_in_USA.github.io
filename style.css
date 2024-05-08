@@ -30,6 +30,14 @@ canvas {
   height: auto !important;  /* Adjusts height automatically based on the width to maintain aspect ratio */
 }
 
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates three columns */
+  gap: 20px; /* Spacing between charts */
+  margin: 20px 0;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
