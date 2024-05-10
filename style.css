@@ -13,7 +13,7 @@ body, html {
 }
 
 .header {
-  background-color: #6A5ACD;
+  background-color: #092e57;
   color: white;
   text-align: center;
   padding: 20px;
@@ -322,12 +322,15 @@ body {
 }
 
   
-  footer {
-    background-color: #6A5ACD; 
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-  }
+footer {
+  /*background-color: #1b3c70;
+  color: white; /* Changed text color to white for better contrast */
+  text-align: center;
+  text-decoration-color: white; /* Adjusted to match the text color */
+   /* Optional: Adds shadow for enhanced readability */
+  padding: 20px;
+  color: white;
+}
   
   .timeline-container {
     max-width: 900px;
